@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
 }
-/* ID section */
+/* ID section (Dalton Senseman)*/
 #header  {
     height: 50px;
     width: 100%;
@@ -10,8 +10,8 @@
 }
 
 
-/* Classes section */
-/* Navagaion */
+/* Classes section (Dalton Senseman)*/
+/* Navagaion (Dalton Senseman)*/
 .topnav {
     Background: silver;
     overflow: hidden;
@@ -40,12 +40,12 @@
     
 }
 
-/* Picture */
+/* Picture (Dalton Senseman)*/
 .mainportrait {
     margin: 5px;
 }
 
-/* Main page 3 columns */
+/* Main page 3 columns (Dalton Senseman)*/
 .row {
     padding-top: 8px;
 }
@@ -108,7 +108,7 @@
     text-align: center;
 }
 
-/* Elements */
+/* Elements (Dalton Senseman)*/
 
 p {
     text-indent: 20px;
@@ -122,7 +122,7 @@ body {
 
 }
 
-/* Special */
+/* Special (Dalton Senseman)*/
 @font-face {
     font-family: 'Chakra Petch';
     font-style: normal;
