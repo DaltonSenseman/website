@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+}
+/* ID section */
+#header  {
+    height: 50px;
+    width: 100%;
+    background-color: #8198C1;
+    box-shadow: 5px 5px 5px grey;
+}
+
+
+/* Classes section */
+/* Navagaion */
+.topnav {
+    Background: silver;
+    overflow: hidden;
+    width: 100%;
+    font-family: 'Chakra Petch', sans-serif;
+    text-align: left;
+    box-shadow: 5px 5px 5px grey;
+}
+
+.topnav a {
+    color: black;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 36px;
+    text-decoration: none;
+    
+}
+
+.topnav a:hover {
+    background-color: #8198C1;
+    color: black;
+    border: 2px solid grey;
+}
+.active {
+    background-color: #8198C1;
+    
+}
+
+/* Picture */
+.mainportrait {
+    margin: 5px;
+}
+
+/* Main page 3 columns */
+.row {
+    padding-top: 8px;
+}
+.columnleft {
+    background: silver;
+    width: 18%;
+    float: left;
+    border: 2px solid black;
+}
+
+.columncenter {
+    background: whitesmoke;
+    width: 70%;
+    padding: 20px;
+    margin-left: 10px;
+    border-top: 2px solid black;
+    float: left;
+}
+
+.columnright {
+    background: white;
+    width: 12%;
+    float: left;
+}
+
+.columnleft p {
+    text-align: center;
+}
+
+.columncenter h1 {
+    text-align: center;
+    width: 100%;
+    background-color: #8198C1;
+    color: black;
+}
+
+.columncenter h2 {
+    text-align: center;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer {
+    width: 100%;
+    height: 50px;
+    text-align: right;
+    background-color:silver;
+}
+
+.contenttitle {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: underline;
+}
+
+.skillslist {
+    text-align: center;
+}
+
+/* Elements */
+
+p {
+    text-indent: 20px;
+    font-family: "Georgia", serif;
+}
+
+body {
+    background: url(https://i.imgur.com/QUxo0z6.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+/* Special */
+@font-face {
+    font-family: 'Chakra Petch';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Chakra Petch Regular'), local('ChakraPetch-Regular'), url(https://fonts.gstatic.com/s/chakrapetch/v1/cIf6MapbsEk7TDLdtEz1BwkWn6pg.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+  @font-face {
+    font-family: 'Chakra Petch';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Chakra Petch Regular'), local('ChakraPetch-Regular'), url(https://fonts.gstatic.com/s/chakrapetch/v1/cIf6MapbsEk7TDLdtEz1BwkWkapgeL4.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+
