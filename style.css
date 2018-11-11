@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
 }
-/* ID section (Dalton Senseman)*/
+/* ID section */
 #header  {
     height: 50px;
     width: 100%;
@@ -10,8 +10,8 @@
 }
 
 
-/* Classes section (Dalton Senseman)*/
-/* Navagaion (Dalton Senseman)*/
+/* Classes section */
+/* Navagaion */
 .topnav {
     Background: silver;
     overflow: hidden;
@@ -40,12 +40,12 @@
     
 }
 
-/* Picture (Dalton Senseman)*/
+/* Picture */
 .mainportrait {
     margin: 5px;
 }
 
-/* Main page 3 columns (Dalton Senseman)*/
+/* Main page 3 columns */
 .row {
     padding-top: 8px;
 }
@@ -92,6 +92,22 @@
     clear: both;
 }
 
+.video {
+    text-align: center;
+	margin: 0 auto;
+	display: block;
+	width: auto;
+}
+
+canvas {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 800px;
+}
+
 .footer {
     width: 100%;
     height: 50px;
@@ -108,7 +124,7 @@
     text-align: center;
 }
 
-/* Elements (Dalton Senseman)*/
+/* Elements */
 
 p {
     text-indent: 20px;
@@ -116,13 +132,13 @@ p {
 }
 
 body {
-    background: url(https://i.imgur.com/QUxo0z6.jpg);
+    background-image: url(./Photographs/curcut.svg); /*SGV background for whole website*/
     background-repeat: no-repeat;
     background-size: cover;
 
 }
 
-/* Special (Dalton Senseman)*/
+/* Special */
 @font-face {
     font-family: 'Chakra Petch';
     font-style: normal;
