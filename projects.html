@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <script type="text/javascript" src="main.js"></script> 
     <link href="style.css" type="text/css" rel="stylesheet">
     <link rel="icon"  href="./Photographs/Icon.png">
     <title>Dalton Senseman | Projects</title>
@@ -21,10 +22,36 @@
   <!-- Main body below Navagation bar -->
   <div class=row>
     <div class="columncenter">
-      <h1>Projects</h1>
+      <!-- SVG Banner top for projects -->
+      <svg height="100" width="1050">
+        <rect width="1050" height="100" style="fill:rgb(129,152,193);stroke-width:1;stroke:rgb(0,0,0)"/>
+        <text fill="#ffffff" font-size="60" font-family="Chakra Petch" x="410" y="70">Projects</text>
+      </svg>
       <h2 class="contenttitle">First Scratch Project: Pa-Ting!</h2>
         <p>Due to flash not being supported by most browsers anymore, 
           I can not embed it here so here is a <a href="https://scratch.mit.edu/projects/245169110/" target="_blank">link</a> to the project site</p>
+          <br>
+          <h2 class="contenttitle">Feild Report</h2>
+          <p>The report is about the differences between computer science, software engineering, and information technology</p>
+          <div style="display:table; margin-left:auto; margin-right:auto;"> 
+            <embed src="./Files/Report.pdf"  ALIGN="CENTER" width="600" height="375">
+          </div>    
+          <br>
+          <br>
+          <div >
+          <h2 class="contenttitle">Canvas</h2>
+            <canvas id="canvas1" style="border:2px solid black;"width="600" height="375"></canvas>
+            <script>
+                var canvas = document.getElementById("canvas1");
+                var ctx = canvas.getContext("2d");
+                ctx.fillStyle = "#A235F3";
+                var x = 300;
+                var y = 288;
+                ctx.fillRect(x,y,60,50);
+                ctx.font = "20px Chakra Petch";
+                ctx.strokeText("This is my little box",5,50); 
+                </script>
+          </div>
     </div>
     <div class="columnright">
     </div>
