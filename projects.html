@@ -1,64 +1,139 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
-    <script src="main.js"></script> 
+    <script src="main.js"></script>
     <link href="style.css" type="text/css" rel="stylesheet">
-    <link rel="icon"  href="./Photographs/Icon.png">
+    <link rel="icon" href="./Photographs/Icon.png">
     <title>Dalton Senseman | Projects</title>
-  </head>
+</head>
 
 <body>
-  
-  <!-- Top banner section  Dalton -->
-  <div id="header"></div>
-  <!-- Navagation bar  Dalton -->
-  <div class="topnav">
+
+    <!-- Top banner section  Dalton -->
+    <div id="header"></div>
+    <!-- Navagation bar  Dalton -->
+    <div class="topnav">
         <a href="./index.html">Home</a>
         <a href="./skills.html">Skills</a>
         <a class="active" href="./projects.html">Projects</a>
         <a href="./contact.html">Contact</a>
-  </div>
-  <!-- Main body below Navagation bar  Dalton -->
-  <div class=row>
-    <div class="columncenter">
-      <!-- SVG Banner top for projects  Dalton -->
-      <svg height="100" width="1050">
-        <rect width="1050" height="100" style="fill:rgb(129,152,193);stroke-width:1;stroke:rgb(0,0,0)"/>
-        <text fill="#ffffff" font-size="60" font-family="Chakra Petch" x="410" y="70">Projects</text>
-      </svg>
-      <h2 class="contenttitle">First Scratch Project: Pa-Ting!</h2>
-        <p>Due to flash not being supported by most browsers anymore, 
-          I can not embed it here so here is a <a href="https://scratch.mit.edu/projects/245169110/" target="_blank">link</a> to the project site</p>
-          <br>
-          <h2 class="contenttitle">Feild Report</h2>
-          <p>The report is about the differences between computer science, software engineering, and information technology</p>
-          <div style="display:table; margin-left:auto; margin-right:auto;"> 
-            <embed src="./Files/Report.pdf" width="600" height="375">
-          </div>    
-          <br>
-          <br>
-          <div >
-          <h2 class="contenttitle">Canvas</h2> <!-- Canvas usage example update into something better  Dalton -->
-            <canvas id="canvas1" style="border:2px solid black;" width="600" height="375"></canvas>
-            <script>
-                var canvas = document.getElementById("canvas1");
-                var ctx = canvas.getContext("2d");
-                ctx.fillStyle = "#A235F3";
-                var x = 300;
-                var y = 288;
-                ctx.fillRect(x,y,60,50);
-                ctx.font = "20px Chakra Petch";
-                ctx.strokeText("This is my little box",5,50); 
+    </div>
+    <!-- Main body below Navagation bar  Dalton -->
+    <div class=row>
+        <div class="columncenter">
+            <!-- SVG Banner top for projects  Dalton -->
+            <svg height="100" width="1050">
+                <rect width="1050" height="100" style="fill:rgb(129,152,193);stroke-width:1;stroke:rgb(0,0,0)" />
+                <text fill="#ffffff" font-size="60" font-family="Chakra Petch" x="410" y="70">Projects</text>
+            </svg>
+            <h2 class="contenttitle">First Scratch Project: Pa-Ting!</h2>
+            <p>
+                Due to flash not being supported by most browsers anymore,
+                I can not embed it here so here is a <a href="https://scratch.mit.edu/projects/245169110/" target="_blank">link</a> to the project site
+            </p>
+            <br>
+            <h2 class="contenttitle">Feild Report</h2>
+            <p>The report is about the differences between computer science, software engineering, and information technology</p>
+            <div style="display:table; margin-left:auto; margin-right:auto;">
+                <embed src="./Files/Report.pdf" width="600" height="375">
+            </div>
+            <br>
+            <br>
+            <div>
+                <h2 class="contenttitle">Canvas</h2> <!-- Canvas usage example update into something better  Dalton -->
+                <canvas id="canvas1" style="border:2px solid black;" width="600" height="375"></canvas>
+                <script>
+                    var canvas = document.getElementById("canvas1");
+                    var ctx = canvas.getContext("2d");
+                    ctx.fillStyle = "#A235F3";
+                    var x = 300;
+                    var y = 288;
+                    ctx.fillRect(x, y, 60, 50);
+                    ctx.font = "20px Chakra Petch";
+                    ctx.strokeText("This is my little box", 5, 50);
                 </script>
-          </div>
+            </div>
+
+            <div style="display:table; margin-left:auto; margin-right:auto;">
+
+                <h2 class="contenttitle">Caesar Cipher</h2>
+                <p>
+                    Click the <b>Start!</b> button to start Caesar Cipher.<br />
+                    Shift input must be between -25 and +25. <br />
+                    Start button will encrypt and decrypt text provided in the textbox.
+
+                </p>
+                Type the message here:
+                <br />
+                <textarea id="message" rows="5" cols="50">Input text here!</textarea>
+                <br />
+                Input shift amount here:
+                <input type="number" id="shiftData" value="0" />
+                <br />
+
+                <button onclick="caesarCipher()">Start!</button>
+                <br />
+                <br />
+                Translated text:
+                <br />
+                <textarea id="outputBox" rows="5" cols="50">Output text here!</textarea>
+
+
+
+                <script>
+
+                    function caesarCipher() {
+
+                        var startingMessage = document.getElementById("message").value; //Grabs input text Dalton//
+
+                        var axciiShiftData = document.getElementById("shiftData").value; //Grabs shift number Dalton//
+                        if (axciiShiftData < -25 || axciiShiftData > 25) { //tells user if shift is out of range Dalton//
+                            alert("Shift is not between -25 or +25");
+                            return;
+                        }
+
+                        var conversion = "";
+                        var stringToAxciiCode = "";
+                        var shiftChange = "";
+
+                        //Loop to run though each letter of the input message Dalton//
+                        for (i = 0; i < startingMessage.length; i++) {
+
+                            //If statement that only allows A-Z or a-z inputs to be encryipted Dalton//
+                            if (startingMessage.charCodeAt(i) >= 32 && startingMessage.charCodeAt(i) <= 126) {
+
+                                stringToAxciiCode = startingMessage.charCodeAt(i);
+                                shiftChange = parseInt(stringToAxciiCode) + parseInt(axciiShiftData); //Adds the shift change ammount to the current i's Axcii value Dalton//
+
+
+                                if (stringToAxciiCode >= 65 && stringToAxciiCode <= 90 && shiftChange > 90 && shiftChange < 116) { //Capital letters A-Z overfolow shift Dalton//
+                                    conversion += String.fromCharCode(shiftChange - 26);
+                                } else if (stringToAxciiCode >= 65 && stringToAxciiCode <= 90 && shiftChange < 65) { //Capital letters A-Z underflow shift Dalton//
+                                    conversion += String.fromCharCode(shiftChange + 26);
+                                } else if (stringToAxciiCode >= 97 && stringToAxciiCode <= 122 && shiftChange > 122) { //Lowercase letters a-z overflow shift Dalton//
+                                    conversion += String.fromCharCode(shiftChange - 26);
+                                } else if (stringToAxciiCode >= 97 && stringToAxciiCode <= 122 && shiftChange < 97) { //Lowercase letters a-z underflow shift Dalton//
+                                    conversion += String.fromCharCode(shiftChange + 26);
+                                } else if (stringToAxciiCode >= 32 && stringToAxciiCode <= 64 || stringToAxciiCode >= 91 && stringToAxciiCode <= 96 || stringToAxciiCode >= 123 && stringToAxciiCode <= 126) {   //symbol axcii codes remain the same Dalton//
+                                    conversion += String.fromCharCode(stringToAxciiCode);
+                                } else {
+                                    conversion += String.fromCharCode(shiftChange); //A-Z or a-z normal shift inside bounds Dalton//
+                                }
+                            }
+                            document.getElementById("outputBox").innerHTML = conversion;
+                        }
+                    }
+
+                </script>
+            </div>
     </div>
-    <div class="columnright">
-    </div>
+<div class="columnright">
+</div>
   </div>
-  <div class="footer">
+<div class="footer">
     <p>2018</p>
-    </div>
+</div>
 </body>
 
 </html>
